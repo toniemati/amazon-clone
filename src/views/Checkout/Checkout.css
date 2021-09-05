@@ -1,0 +1,19 @@
+.checkout {
+  display: flex;
+  max-width: 1500px;
+  margin: 12px auto;
+}
+
+/* .checkout__left {} */
+
+.checkout__ad {
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.checkout__text {
+  margin: 10px 20px;
+}
+
+/* .checkout__right {} */
