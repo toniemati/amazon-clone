@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Product from '../../components/Product/Product';
 import './Home.css';
 import productsList from '../../products';
 
 const Home = () => {
-  const [products, setProducts] = useState(productsList);
+  const [products] = useState(productsList);
 
   return (
     <div className="home">
