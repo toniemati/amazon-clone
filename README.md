@@ -8,7 +8,7 @@
 * [x] build the product
 * [x] introduce react contex api
 * [x] setup add to basket button
-* [ ] build checkout page
-* [ ] build subtotal component
-* [ ] build login page
+* [x] build checkout page
+* [x] build subtotal component
+* [x] build login page
 * [ ] deploy app
