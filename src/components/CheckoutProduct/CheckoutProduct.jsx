@@ -2,7 +2,7 @@ import { useStateValue } from '../../StateProvider';
 import './CheckoutProduct.css';
 
 const CheckoutProduct = ({ product }) => {
-  const [{ basket }, dispatch] = useStateValue();
+  const [, dispatch] = useStateValue();
 
   const deleteFromBasket = () => {
     if (window.confirm('Are your sure to remove this item?')) {

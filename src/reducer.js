@@ -9,6 +9,8 @@ export const initialState = {
   user: null
 };
 
+export const getBasketTotal = (basket) => basket.reduce((acc, { price }) => acc + price, 0);
+
 const reducer = (state, action) => {
   console.log('Action 🌵:', action);
 

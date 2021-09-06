@@ -1,23 +1,23 @@
 import './Subtotal.css';
 import { useStateValue } from '../../StateProvider';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { getBasketTotal } from '../../reducer'; 
 
 const Subtotal = () => {
-  const [{ basket }, dispatch] = useStateValue();
-  const [total, setTotal] = useState(0);
-
-  useEffect(() => {
-    const sum = basket.reduce((acc, { price }) => acc + price, 0);
-    setTotal(sum);
-  }, [basket]);
+  const [{ basket }] = useStateValue();
+  const [total] = useState(getBasketTotal(basket));
 
   return (
     <div className="subtotal">
-      <p>
-        <small>$</small>
-        <strong>{total}</strong>
-      </p>
-      <button>Proceed to Checkout</button>
+      <div>
+        Subtotal ({basket.length} items): <strong>${total}</strong>
+      </div>
+
+      <small className="subtotal__gift">
+        <input type="checkbox" /> This order contains a gift
+      </small>
+
+      <button className="subtotal__button">Proceed to Checkout</button>
     </div>
   )
 }
