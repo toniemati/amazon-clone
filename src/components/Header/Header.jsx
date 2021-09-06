@@ -1,12 +1,11 @@
 import { Search, ShoppingBasket } from '@material-ui/icons';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { auth } from '../../firebase';
 import { useStateValue } from '../../StateProvider';
 import './Header.css';
 
 const Header = () => {
   const [{ basket, user }] = useStateValue();
-  const history = useHistory();
 
   const handleLogOut = () => {
     if (user) {
